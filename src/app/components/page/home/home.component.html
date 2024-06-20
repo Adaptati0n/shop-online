@@ -1,0 +1,60 @@
+<div class="filter-menu">
+  <select (change)="filterItems($event)">
+    <option value="all">All</option>
+    <option value="men">Men</option>
+    <option value="women">Women</option>
+    <option value="kids">Kids</option>
+    <option value="sport">Sport</option>
+    <option value="sportwear">Sportwear</option>
+    <!-- Add more filter options as needed -->
+  </select>
+</div>
+
+<div class="product-container">
+  <ul>
+    <li *ngFor="let items of filteredItems">
+      <a routerLink="/items/{{items.id}}">
+        <img [src]="items.imageUrl" [alt]="items.name"/>
+        <div class="content">
+          <div class="header">
+            <span class="name">{{items.name}}</span>
+            <span class="favorite" (click)="toggleFavorite(items)">
+              {{items.favorite ? '❤️' : '♡'}}
+            </span>
+          </div>
+          <div class="details">
+            <div class="rating-container">
+              <rating [(ngModel)]="items.stars" [max]="5" [readonly]="isReadonly" [titles]="['one', 'two', 'three', 'four', 'five']" aria-label="Rating"></rating>
+              <pre>Rate : {{items.stars}}</pre>
+            </div>
+            <div class="origins">
+              Origin:
+              <span *ngFor="let origin of items.origins">
+                {{origin}}
+              </span>
+            </div>
+            <div class="available-time">
+              <ng-container *ngIf="items.availableTime === 'indeterminate'; else shortTerm">
+                <span>Available✅</span>
+              </ng-container>
+              <ng-template #shortTerm>
+                <span>🕙</span>
+                {{items.availableTime}}
+              </ng-template>
+            </div>
+            <div class="price">
+              <span>
+                {{items.price | currency}}
+              </span>
+            </div>
+            <div class="tags">
+              <span *ngFor="let tag of items.tags">
+                {{tag}}
+              </span>
+            </div>
+          </div>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>
