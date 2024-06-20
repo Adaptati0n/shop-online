@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { items } from "../../../../shared/models/items";
 import { sample_items } from '../../../../data';
-import { ItemsService } from "../../../../../frontend/services/items.service";
+
+
 
 interface Brand {
   name: string;
@@ -31,7 +32,8 @@ export class HomeComponent implements OnInit {
 
 
   constructor() {
-  }
+
+    }
 
 
   ngOnInit() {

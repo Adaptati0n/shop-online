@@ -1,3 +1,8 @@
+* {
+
+  user-select: none;
+}
+
 /* Container styling */
 .container {
   padding: 20px;
@@ -227,4 +232,5 @@ a:hover {
   font-weight: bold;
   color: #28a745;
   text-align: center;
+  cursor: default;
 }

@@ -12,7 +12,7 @@ export const sample_items: items[] = [
     stars: 5,
     imageUrl: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/afe4ab5a-a2d1-40e5-b580-44499cac63e8/chaussure-air-max-1-86-og-pour-zg8b7S.png",
     tags: ['Sport', 'Fashion', 'Nike Men'],
-    category: 'Men',
+    category: 'men',
     brand: 'Nike'
   },
   {
@@ -21,11 +21,11 @@ export const sample_items: items[] = [
     price: 35,
     availableTime: 'indeterminate',
     favorite: false,
-    origins: ['China'],
+    origins: ['Italy'],
     stars: 4.5,
     imageUrl: 'https://www.tennis-point.co.uk/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwb8eb9bb3/images/004/467/58056000__14.jpg?q=80&sw=543',
     tags: ['Sport', 'Fashion', 'Nike Women'],
-    category: 'Women',
+    category: 'women',
     brand: 'Nike'
   },
   {
@@ -38,7 +38,7 @@ export const sample_items: items[] = [
     stars: 5,
     imageUrl: 'https://boathousestores.com/cdn/shop/files/NIK-DQ5761-010-BLK-3.jpg?v=1703174309&width=1000',
     tags: ['Hoodie', 'Fashion', 'Nike Women'],
-    category: 'Women',
+    category: 'women',
     brand: 'Nike'
   },
   {
@@ -47,11 +47,11 @@ export const sample_items: items[] = [
     price: 82,
     availableTime: '1 week left',
     favorite: false,
-    origins: ['China'],
+    origins: ['France'],
     stars: 5,
     imageUrl: 'https://images.asos-media.com/products/nike-court-dri-fit-advantage-dress-in-black/23830755-1-black?$n_640w$&wid=513&fit=constrain',
     tags: ['Dress', 'Fashion', 'Nike Women'],
-    category: 'Women',
+    category: 'women',
     brand: 'Nike'
   },
   {
@@ -60,11 +60,11 @@ export const sample_items: items[] = [
     price: 65,
     availableTime: 'indeterminate',
     favorite: false,
-    origins: ['China'],
+    origins: ['USA'],
     stars: 5,
     imageUrl: 'https://parkoutlet.com.ph/cdn/shop/files/AURORA_DO6609-010_PHSYM006-2000_640x_crop_center.png?v=1712312975',
     tags: ['Crop Top', 'Fashion', 'Nike Women'],
-    category: 'Women',
+    category: 'women',
     brand: 'Nike'
   },
   {
@@ -73,12 +73,90 @@ export const sample_items: items[] = [
     price: 77,
     availableTime: 'indeterminate',
     favorite: false,
-    origins: ['China'],
+    origins: ['Italy'],
     stars: 5,
     imageUrl: 'https://www.marmonsports.com/58254-large_default/nike-sportswear-phoenix-fleece-women-s-hoodie-playful-pink-black.jpg',
     tags: ['Hoodie', 'Fashion', 'Nike Women'],
-    category: 'Women',
+    category: 'women',
     brand: 'Nike'
+  },
+  {
+    id:'7',
+    name: 'OWN THE RUN RUNNERS HOODIE (GENDER NEUTRAL)',
+    price: 110,
+    availableTime: 'indeterminate',
+    favorite: false,
+    origins: ['China'],
+    stars: 5,
+    imageUrl: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/21eef904ca694a508503995f60879506_9366/Sweat-shirt_a_capuche_Own_the_Run_Runners_Non_genre_Noir_IW9274_21_model.jpg',
+    tags: ['Hoodie', 'Fashion', 'Adidas (GENDER NEUTRAL)'],
+    category: 'women, men',
+    brand: 'Adidas'
+  },
+  {
+    id:'8',
+    name: 'OWN THE RUN 3-STRIPES HOODIE',
+    price: 100,
+    availableTime: 'indeterminate',
+    favorite: false,
+    origins: ['Japan'],
+    stars: 5,
+    imageUrl: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/50d71a7cbdb5452784b7f516e3b8e203_9366/Own_the_Run_3-Stripes_Hoodie_Black_IK4984_HM1.jpg',
+    tags: ['Hoodie', 'Fashion', 'Adidas Men'],
+    category: 'men',
+    brand: 'Adidas'
+  },
+  {
+    id:'9',
+    name: 'TIRO CUT 3-STRIPES JACQUARD TEE DRESS',
+    price: 55,
+    availableTime: 'indeterminate',
+    favorite: false,
+    origins: ['USA'],
+    stars: 5,
+    imageUrl: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/6311f08083bd4fad8d3b4a99de039c9f_9366/Tiro_Cut_3-Stripes_Jacquard_Tee_Dress_Blue_JG1323_21_model.jpg',
+    tags: ['Dress', 'Fashion', 'Adidas Women'],
+    category: 'women',
+    brand: 'Adidas'
+  },
+  {
+    id:'10',
+    name: 'DARE TO Long Sleeve Tee',
+    price: 35,
+    availableTime: 'indeterminate',
+    favorite: false,
+    origins: ['Italy'],
+    stars: 5,
+    imageUrl: 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/627991/02/mod01/fnd/EEA/fmt/png/DARE-TO-Long-Sleeve-Tee',
+    tags: ['Pull', 'Fashion', 'Puma Women'],
+    category: 'women',
+    brand: 'Puma'
+  },
+  {
+    id:'11',
+    name: 'PUMA Women\'s Swimsuit',
+    price: 35,
+    availableTime: 'indeterminate',
+    favorite: false,
+    origins: ['Italy'],
+    stars: 5,
+    imageUrl: 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/938342/01/mod02/fnd/EEA/fmt/png/PUMA-Women\'s-Swimsuit',
+    tags: ['Swimsuit', 'Fashion', 'Puma Women'],
+    category: 'women',
+    brand: 'Puma'
+  },
+  {
+    id:'12',
+    name: 'Men\'s Poly Tracksuit',
+    price: 75,
+    availableTime: 'indeterminate',
+    favorite: false,
+    origins: ['France'],
+    stars: 5,
+    imageUrl: 'https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_600,h_600/global/677427/11/mod01/fnd/EEA/fmt/png/Men\'s-Poly-Tracksuit',
+    tags: ['Tracksuit', 'Fashion', 'Puma Men'],
+    category: 'men',
+    brand: 'Puma'
   },
 
 ]
