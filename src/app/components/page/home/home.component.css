@@ -4,6 +4,64 @@
   background-color: #f8f9fa;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center; /* Center content */
+}
+
+/* Title bar styling */
+.title-bar {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.article-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Filter menu */
+.filter-menu {
+  float: left;
+  margin-right: 20px;
+}
+
+.filter-menu select {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Tabs for brand logos */
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.tabs button:hover {
+  background-color: #0056b3;
+}
+
+.brand-logo {
+  width: 25px;
+  height: 20px;
 }
 
 /* Product container styling */
@@ -12,6 +70,7 @@
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
+  clear: both;
 }
 
 ul {
@@ -31,6 +90,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 a {
@@ -52,11 +112,33 @@ a:hover {
   transform: scale(1.02);
 }
 
-a img {
+.image-container {
+  position: relative;
   width: 100%;
-  height: 200px; /* Fixed height for images */
+  height: 250px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-bottom: 1px solid #ddd;
+}
+
+.favorite {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 1.5rem;
+  color: red;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 5px;
+}
+
+.favorite.not {
+  color: #ccc;
 }
 
 .content {
@@ -65,21 +147,21 @@ a img {
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  padding: 0;
-  text-align: center; /* Center the text */
+  padding: 0 10px;
 }
 
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px;
   background-color: #007bff;
   color: white;
   font-weight: bold;
-  font-size: 1rem; /* Adjust font size for consistency */
+  font-size: 1.1rem; /* Increase font size slightly */
   height: 50px; /* Fixed height for consistency */
-  text-align: center; /* Center the text */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .header .name {
@@ -87,28 +169,26 @@ a img {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 0.9rem; /* Adjust font size to fit in one line */
-}
-
-.favorite {
-  font-size: 1.5rem;
-  color: red;
-  cursor: pointer;
-}
-
-.favorite.not {
-  color: #ccc;
+  font-size: 1.1rem; /* Increase font size */
+  padding: 10px; /* Add padding to fit in one line */
 }
 
 .details {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+  text-align: center; /* Center the text */
 }
 
 .rating-container {
   text-align: center;
+}
+
+.rating-value {
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #555;
 }
 
 .origins {
@@ -128,14 +208,18 @@ a img {
 .available-time {
   display: flex;
   align-items: center;
-  font-size: 1rem;
+  font-size: 0.75rem; /* Reduce font size */
   color: #555;
   justify-content: center;
 }
 
 .available-time span {
   margin-right: 5px;
-  font-size: 1.5rem;
+  font-size: 1rem; /* Reduce font size */
+}
+
+.available-text {
+  font-size: 0.75rem; /* Smaller font size */
 }
 
 .price {
@@ -143,39 +227,4 @@ a img {
   font-weight: bold;
   color: #28a745;
   text-align: center;
-}
-
-.tags {
-  margin-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-}
-
-.tags span {
-  background-color: #ff8c00;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.875rem;
-}
-
-/* Rating stars */
-.rating .fa-star,
-.rating .fa-star-o {
-  color: #f39c12;
-}
-
-/* Filter menu */
-.filter-menu {
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.filter-menu select {
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ddd;
 }

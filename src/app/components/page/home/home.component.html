@@ -1,60 +1,64 @@
-<div class="filter-menu">
-  <select (change)="filterItems($event)">
-    <option value="all">All</option>
-    <option value="men">Men</option>
-    <option value="women">Women</option>
-    <option value="kids">Kids</option>
-    <option value="sport">Sport</option>
-    <option value="sportwear">Sportwear</option>
-    <!-- Add more filter options as needed -->
-  </select>
-</div>
+<div class="container">
+  <div class="title-bar">
+    <h1 class="article-title">{{ selectedBrand }}</h1>
+  </div>
 
-<div class="product-container">
-  <ul>
-    <li *ngFor="let items of filteredItems">
-      <a routerLink="/items/{{items.id}}">
-        <img [src]="items.imageUrl" [alt]="items.name"/>
-        <div class="content">
-          <div class="header">
-            <span class="name">{{items.name}}</span>
-            <span class="favorite" (click)="toggleFavorite(items)">
-              {{items.favorite ? '❤️' : '♡'}}
+  <div class="filter-menu">
+    <select (change)="filterItems($event)">
+      <option value="all">All</option>
+      <option value="men">Men</option>
+      <option value="women">Women</option>
+      <option value="boy">Boy</option>
+      <option value="girl">Girl</option>
+    </select>
+  </div>
+
+  <div class="tabs">
+    <button *ngFor="let brand of brands" (click)="selectBrand(brand)">
+      <img [src]="brand.logo" [alt]="brand.name" class="brand-logo"/>
+      {{ brand.name }}
+    </button>
+  </div>
+
+  <div class="product-container">
+    <ul>
+      <li *ngFor="let item of filteredItems">
+        <a routerLink="/items/{{item.id}}">
+          <div class="image-container">
+            <img [src]="item.imageUrl" [alt]="item.name"/>
+            <span class="favorite" (click)="toggleFavorite(item)">
+              {{item.favorite ? '❤️' : '♡'}}
             </span>
           </div>
-          <div class="details">
-            <div class="rating-container">
-              <rating [(ngModel)]="items.stars" [max]="5" [readonly]="isReadonly" [titles]="['one', 'two', 'three', 'four', 'five']" aria-label="Rating"></rating>
-              <pre>Rate : {{items.stars}}</pre>
+          <div class="content">
+            <div class="header">
+              <span class="name">{{item.name}}</span>
             </div>
-            <div class="origins">
-              Origin:
-              <span *ngFor="let origin of items.origins">
-                {{origin}}
-              </span>
-            </div>
-            <div class="available-time">
-              <ng-container *ngIf="items.availableTime === 'indeterminate'; else shortTerm">
-                <span>Available✅</span>
-              </ng-container>
-              <ng-template #shortTerm>
-                <span>🕙</span>
-                {{items.availableTime}}
-              </ng-template>
-            </div>
-            <div class="price">
-              <span>
-                {{items.price | currency}}
-              </span>
-            </div>
-            <div class="tags">
-              <span *ngFor="let tag of items.tags">
-                {{tag}}
-              </span>
+            <div class="details">
+              <div class="rating-container">
+                <ngb-rating [(rate)]="item.stars" [max]="5" [readonly]="false" [resettable]="true"></ngb-rating>
+                <div class="rating-value">Rate: {{item.stars}} ⭐</div>
+              </div>
+              <div class="origins">
+                Origin:
+                <span *ngFor="let origin of item.origins">{{origin}}</span>
+              </div>
+              <div class="available-time">
+                <ng-container *ngIf="item.availableTime === 'indeterminate'; else shortTerm">
+                  <span class="available-text">✅Available</span>
+                </ng-container>
+                <ng-template #shortTerm>
+                  <span>🕙</span>
+                  {{item.availableTime}}
+                </ng-template>
+              </div>
+              <div class="price">
+                <span>{{item.price | currency}}</span>
+              </div>
             </div>
           </div>
-        </div>
-      </a>
-    </li>
-  </ul>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>

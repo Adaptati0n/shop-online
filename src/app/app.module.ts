@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from 'C:/shop-online/frontend/components/partials/header/header.component';
 import { HomeComponent } from './components/page/home/home.component';
-import {RatingModule} from "ngx-bootstrap/rating";
+
 import {FormsModule} from "@angular/forms";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -21,7 +22,8 @@ import {FormsModule} from "@angular/forms";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    RatingModule.forRoot()
+
+    NgbModule
 
 
 

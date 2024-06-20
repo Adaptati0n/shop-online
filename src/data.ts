@@ -12,6 +12,8 @@ export const sample_items: items[] = [
     stars: 5,
     imageUrl: "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/afe4ab5a-a2d1-40e5-b580-44499cac63e8/chaussure-air-max-1-86-og-pour-zg8b7S.png",
     tags: ['Sport', 'Fashion', 'Nike Men'],
+    category: 'Men',
+    brand: 'Nike'
   },
   {
     id:'2',
@@ -23,6 +25,8 @@ export const sample_items: items[] = [
     stars: 4.5,
     imageUrl: 'https://www.tennis-point.co.uk/dw/image/v2/BBDP_PRD/on/demandware.static/-/Sites-master-catalog/default/dwb8eb9bb3/images/004/467/58056000__14.jpg?q=80&sw=543',
     tags: ['Sport', 'Fashion', 'Nike Women'],
+    category: 'Women',
+    brand: 'Nike'
   },
   {
     id:'3',
@@ -34,6 +38,8 @@ export const sample_items: items[] = [
     stars: 5,
     imageUrl: 'https://boathousestores.com/cdn/shop/files/NIK-DQ5761-010-BLK-3.jpg?v=1703174309&width=1000',
     tags: ['Hoodie', 'Fashion', 'Nike Women'],
+    category: 'Women',
+    brand: 'Nike'
   },
   {
     id:'4',
@@ -45,6 +51,8 @@ export const sample_items: items[] = [
     stars: 5,
     imageUrl: 'https://images.asos-media.com/products/nike-court-dri-fit-advantage-dress-in-black/23830755-1-black?$n_640w$&wid=513&fit=constrain',
     tags: ['Dress', 'Fashion', 'Nike Women'],
+    category: 'Women',
+    brand: 'Nike'
   },
   {
     id:'5',
@@ -56,6 +64,8 @@ export const sample_items: items[] = [
     stars: 5,
     imageUrl: 'https://parkoutlet.com.ph/cdn/shop/files/AURORA_DO6609-010_PHSYM006-2000_640x_crop_center.png?v=1712312975',
     tags: ['Crop Top', 'Fashion', 'Nike Women'],
+    category: 'Women',
+    brand: 'Nike'
   },
   {
     id:'6',
@@ -67,6 +77,8 @@ export const sample_items: items[] = [
     stars: 5,
     imageUrl: 'https://www.marmonsports.com/58254-large_default/nike-sportswear-phoenix-fleece-women-s-hoodie-playful-pink-black.jpg',
     tags: ['Hoodie', 'Fashion', 'Nike Women'],
+    category: 'Women',
+    brand: 'Nike'
   },
 
 ]
